@@ -39,7 +39,7 @@ import theano.tensor as T
 from theano.tensor.nnet import conv
 from theano.tensor.nnet import softmax
 from theano.tensor import shared_randomstreams
-from theano.tensor.signal import downsample
+from theano.tensor.signal import pool as downsample
 
 # Activation functions for neurons
 def linear(z): return z
@@ -49,7 +49,7 @@ from theano.tensor import tanh
 
 
 #### Constants
-GPU = True
+GPU = False
 if GPU:
     print "Trying to run under a GPU.  If this is not desired, then modify "+\
         "network3.py\nto set the GPU flag to False."
